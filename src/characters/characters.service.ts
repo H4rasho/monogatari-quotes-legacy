@@ -12,7 +12,9 @@ export class CharactersService {
   ) {}
 
   create(createCharacterDto: CreateCharacterDto) {
-    return 'This action adds a new character';
+    return this.characterModel.create({
+      ...createCharacterDto,
+    });
   }
 
   async findAll(): Promise<Character[]> {

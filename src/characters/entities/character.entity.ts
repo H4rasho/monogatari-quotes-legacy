@@ -22,7 +22,7 @@ export class Character extends Model {
   name: string;
 
   @Column({
-    type: DataType.STRING(50),
+    type: DataType.TEXT,
     comment: 'The description of the character',
   })
   description?: string;
