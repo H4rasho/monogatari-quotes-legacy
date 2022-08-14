@@ -21,15 +21,17 @@ export class CharactersService {
     return await this.characterModel.findAll();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} character`;
+  async findOne(id: string) {
+    return await this.characterModel.findByPk(id);
   }
 
-  update(id: number, updateCharacterDto: UpdateCharacterDto) {
-    return `This action updates a #${id} character`;
+  async update(id: string, updateCharacterDto: UpdateCharacterDto) {
+    return await this.characterModel.update(updateCharacterDto, {
+      where: { id },
+    });
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} character`;
+  remove(id: string) {
+    return this.characterModel.destroy({ where: { id } });
   }
 }
