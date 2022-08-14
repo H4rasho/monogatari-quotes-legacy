@@ -31,7 +31,7 @@ export class CharactersService {
     });
   }
 
-  remove(id: string) {
-    return this.characterModel.destroy({ where: { id } });
+  async remove(id: string) {
+    return await this.characterModel.destroy({ where: { id } });
   }
 }
