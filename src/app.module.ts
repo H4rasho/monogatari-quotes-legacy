@@ -5,6 +5,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { DB } from './config';
 import { CharactersModule } from './characters/characters.module';
+import { SeasonsModule } from './seasons/seasons.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { CharactersModule } from './characters/characters.module';
       autoLoadModels: true,
     }),
     CharactersModule,
+    SeasonsModule,
   ],
   controllers: [AppController],
   providers: [AppService],
