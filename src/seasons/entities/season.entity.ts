@@ -1,4 +1,5 @@
-import { Column, DataType, Model, Table } from 'sequelize-typescript';
+import { Column, DataType, HasMany, Model, Table } from 'sequelize-typescript';
+import { Chapter } from 'src/chapters/entities/chapter.entity';
 
 @Table({
   tableName: 'Seasons',
@@ -33,4 +34,11 @@ export class Season extends Model {
     comment: 'Season start date',
   })
   releaseDate: Date;
+
+  @HasMany(() => Chapter, {
+    foreignKey: 'seasonId',
+    onDelete: 'SET NULL',
+    onUpdate: 'CASCADE',
+  })
+  chapters: Chapter[];
 }
