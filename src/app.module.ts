@@ -6,6 +6,7 @@ import { DB } from './config';
 import { CharactersModule } from './characters/characters.module';
 import { SeasonsModule } from './seasons/seasons.module';
 import { ChaptersModule } from './chapters/chapters.module';
+import { QuotesModule } from './quotes/quotes.module';
 
 @Module({
   imports: [
@@ -16,6 +17,7 @@ import { ChaptersModule } from './chapters/chapters.module';
     CharactersModule,
     SeasonsModule,
     ChaptersModule,
+    QuotesModule,
   ],
   controllers: [AppController],
   providers: [AppService],
