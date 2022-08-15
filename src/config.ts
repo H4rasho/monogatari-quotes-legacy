@@ -3,21 +3,11 @@ dotenv.config();
 
 const {
   PORT = 4000,
-  DB_HOST = 'localhost',
-  DB_PORT = 5432,
-  DB_NAME = 'monogatari',
-  DB_USER = 'postgres',
-  DB_PASS = '123456',
-  DB_DIALECT = 'postgres',
+  DB_URI = 'postgres://postgres:123456@localhost:5432/postgres',
 } = process.env;
 
 export const DB = {
-  DIALECT: DB_DIALECT,
-  HOST: DB_HOST,
-  PORT: DB_PORT,
-  NAME: DB_NAME,
-  USER: DB_USER,
-  PASS: DB_PASS,
+  URI: DB_URI,
 };
 
 export const SETUP = {
