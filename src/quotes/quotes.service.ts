@@ -3,6 +3,7 @@ import { InjectModel } from '@nestjs/sequelize';
 import { Chapter } from 'src/chapters/entities/chapter.entity';
 import { Character } from 'src/characters/entities/character.entity';
 import { Season } from 'src/seasons/entities/season.entity';
+import { QuotesArgs } from './dto/args-quote';
 import { CreateQuoteDto } from './dto/create-quote.dto';
 import { UpdateQuoteDto } from './dto/update-quote.dto';
 import { Quote } from './entities/quote.entity';
@@ -18,9 +19,12 @@ export class QuotesService {
     return await this.quoteModel.create({ ...createQuoteDto });
   }
 
-  async findAll() {
+  async findAll({ offset, limit }: QuotesArgs) {
+    console.log(limit);
     return await this.quoteModel.findAll({
       include: [Character, { model: Chapter, include: [Season] }],
+      offset,
+      limit,
     });
   }
 

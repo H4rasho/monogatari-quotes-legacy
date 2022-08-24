@@ -6,6 +6,7 @@ import {
   Patch,
   Param,
   Delete,
+  Query,
 } from '@nestjs/common';
 import { QuotesService } from './quotes.service';
 import { CreateQuoteDto } from './dto/create-quote.dto';
@@ -21,8 +22,8 @@ export class QuotesController {
   }
 
   @Get()
-  findAll() {
-    return this.quotesService.findAll();
+  findAll(@Query('offset') offset: number, @Query('limit') limit: number) {
+    return this.quotesService.findAll({ offset, limit });
   }
 
   @Get(':id')
