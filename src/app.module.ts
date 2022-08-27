@@ -8,6 +8,7 @@ import { SeasonsModule } from './seasons/seasons.module';
 import { ChaptersModule } from './chapters/chapters.module';
 import { QuotesModule } from './quotes/quotes.module';
 import { UserModule } from './user/user.module';
+import { RolModule } from './rol/rol.module';
 
 @Module({
   imports: [
@@ -20,6 +21,7 @@ import { UserModule } from './user/user.module';
     ChaptersModule,
     QuotesModule,
     UserModule,
+    RolModule,
   ],
   controllers: [AppController],
   providers: [AppService],
