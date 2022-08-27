@@ -37,6 +37,14 @@ export class Quote extends Model {
   })
   image?: string;
 
+  @Column({
+    type: DataType.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+    comment: 'Indicates if the quote is approved',
+  })
+  approved: boolean;
+
   @ForeignKey(() => Character)
   @Column({
     type: DataType.UUID,
