@@ -23,19 +23,6 @@ export class Season extends Model {
   })
   name: string;
 
-  @Column({
-    type: DataType.TEXT,
-    comment: 'Season description',
-  })
-  synopsis?: string;
-
-  @Column({
-    type: DataType.DATEONLY,
-    allowNull: false,
-    comment: 'Season start date',
-  })
-  releaseDate: Date;
-
   @HasMany(() => Chapter, {
     foreignKey: 'seasonId',
     onDelete: 'SET NULL',
