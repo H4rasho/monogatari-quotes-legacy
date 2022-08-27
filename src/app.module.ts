@@ -7,6 +7,7 @@ import { CharactersModule } from './characters/characters.module';
 import { SeasonsModule } from './seasons/seasons.module';
 import { ChaptersModule } from './chapters/chapters.module';
 import { QuotesModule } from './quotes/quotes.module';
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -18,6 +19,7 @@ import { QuotesModule } from './quotes/quotes.module';
     SeasonsModule,
     ChaptersModule,
     QuotesModule,
+    UserModule,
   ],
   controllers: [AppController],
   providers: [AppService],
