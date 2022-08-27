@@ -25,6 +25,7 @@ export class Chapter extends Model {
   @Column({
     type: DataType.STRING(50),
     allowNull: false,
+    unique: true,
     comment: 'Chapter name',
   })
   name: string;

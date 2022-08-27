@@ -19,6 +19,7 @@ export class Season extends Model {
     type: DataType.STRING,
     allowNull: false,
     comment: 'Season name',
+    unique: true,
   })
   name: string;
 

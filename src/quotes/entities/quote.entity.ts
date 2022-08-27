@@ -27,6 +27,7 @@ export class Quote extends Model {
     type: DataType.TEXT,
     allowNull: false,
     comment: 'The text of the quote',
+    unique: true,
   })
   quote: string;
 

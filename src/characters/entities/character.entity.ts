@@ -17,6 +17,7 @@ export class Character extends Model {
   @Column({
     type: DataType.STRING(50),
     allowNull: false,
+    unique: true,
     comment: 'The name of the character',
   })
   name: string;
