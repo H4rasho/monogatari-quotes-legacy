@@ -9,6 +9,7 @@ import { ChaptersModule } from './chapters/chapters.module';
 import { QuotesModule } from './quotes/quotes.module';
 import { UserModule } from './user/user.module';
 import { RolModule } from './rol/rol.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { RolModule } from './rol/rol.module';
     QuotesModule,
     UserModule,
     RolModule,
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
