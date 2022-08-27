@@ -3,7 +3,7 @@ dotenv.config();
 
 const {
   PORT = 4000,
-  DB_URI = 'postgres://postgres:123456@localhost:5432/postgres',
+  DB_URI = 'postgres://postgres:123456@localhost:5432/monogatari',
 } = process.env;
 
 export const DB = {
