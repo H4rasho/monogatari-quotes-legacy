@@ -20,7 +20,7 @@ export class QuotesController {
   create(@Body() createQuoteDto: CreateQuoteDto) {
     return this.quotesService.create(createQuoteDto);
   }
-
+   
   @Get()
   findAll(@Query('offset') offset: number, @Query('limit') limit: number) {
     return this.quotesService.findAll({ offset, limit });
